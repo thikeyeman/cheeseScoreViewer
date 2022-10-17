@@ -6,7 +6,7 @@
 </head>
 
 <body>
-	<p>nmnm
+	<p>nmn
 	</p>
 </body>
 </html>
