@@ -6,7 +6,7 @@
 </head>
 
 <body>
-	<p>nhi all
+	<p>
 	</p>
 </body>
 </html>
