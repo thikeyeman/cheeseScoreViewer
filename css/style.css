@@ -2,4 +2,10 @@
 * {
     margin: 0;
     padding: 0;
+	overflow: hidden;
+}
+body{
+	background-color: green;
+	/*background-image: url("file:///C:/Users/yxm211023/Downloads/_MG_7434.JPG");
+	background-size: cover;*/
 }
