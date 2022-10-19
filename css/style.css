@@ -1,8 +1,15 @@
 /* CSS Document */
 
+
 .userScore img{
     padding-top:700px;
     width: 10%;
     height: 10%;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
 }
