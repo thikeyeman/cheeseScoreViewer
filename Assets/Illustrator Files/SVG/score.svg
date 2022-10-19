@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 523 636">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #a59ac5;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        opacity: .5;
+      }
+
+      .cls-9, .cls-10 {
+        fill: #604972;
+      }
+
+      .cls-9, .cls-11 {
+        opacity: .37;
+      }
+
+      .cls-12 {
+        stroke: #666;
+      }
+
+      .cls-12, .cls-13, .cls-14, .cls-15, .cls-5, .cls-10, .cls-16, .cls-17 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-12, .cls-13, .cls-5 {
+        fill: none;
+      }
+
+      .cls-13, .cls-16 {
+        stroke: #604972;
+      }
+
+      .cls-14 {
+        stroke: #575650;
+      }
+
+      .cls-14, .cls-18 {
+        fill: #575650;
+      }
+
+      .cls-4 {
+        fill: #e7e3d9;
+      }
+
+      .cls-15 {
+        fill: #71c6d4;
+      }
+
+      .cls-15, .cls-10, .cls-17 {
+        stroke: #486567;
+      }
+
+      .cls-5 {
+        stroke: #000;
+      }
+
+      .cls-6 {
+        fill: #a2d3db;
+      }
+
+      .cls-16 {
+        fill: #eb76a1;
+      }
+
+      .cls-11 {
+        fill: #486567;
+      }
+
+      .cls-7 {
+        fill: #cb98bf;
+      }
+
+      .cls-8 {
+        fill: #f2d187;
+      }
+
+      .cls-19 {
+        font-family: KozGoPr6N-Regular-90ms-RKSJ-H, 'Kozuka Gothic Pr6N';
+        font-size: 48px;
+      }
+
+      .cls-17 {
+        fill: #f2a184;
+      }
+
+      .cls-18 {
+        opacity: .25;
+      }
+
+      .cls-2 {
+        font-family: HGPSoeiKakupoptai, HGPSoeiKakupoptai;
+        font-size: 17px;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_1-2" data-name="レイヤー 1">
+    <g>
+      <rect class="cls-4" x="80.5" y=".08" width="78.85" height="630.16"/>
+      <rect class="cls-7" x="160.56" y=".55" width="78.85" height="630.16"/>
+      <rect class="cls-6" x="240.62" y="1.02" width="78.85" height="630.16"/>
+      <rect class="cls-3" x="320.68" y="1.48" width="78.85" height="630.16"/>
+      <rect class="cls-8" x="401.15" y="1.48" width="78.85" height="630.16"/>
+      <path class="cls-5" d="M480.25,0V621.56c0,7.08-5.74,12.82-12.82,12.82H93.07c-7.08,0-12.82-5.74-12.82-12.82V0"/>
+      <text class="cls-19" transform="translate(14.52 465.73) scale(1.12 1)"><tspan x="0" y="0">10</tspan></text>
+      <line class="cls-12" y1="480.28" x2="523" y2="480.28"/>
+      <text class="cls-19" transform="translate(40.52 619.73) scale(1.12 1)"><tspan x="0" y="0">0</tspan></text>
+      <line class="cls-12" y1="634.28" x2="523" y2="634.28"/>
+      <text class="cls-19" transform="translate(14.52 254.73) scale(1.12 1)"><tspan x="0" y="0">20</tspan></text>
+      <line class="cls-12" y1="269.28" x2="523" y2="269.28"/>
+      <text class="cls-19" transform="translate(14.52 66.73) scale(1.12 1)"><tspan x="0" y="0">30</tspan></text>
+      <line class="cls-12" y1="81.28" x2="523" y2="81.28"/>
+      <path class="cls-13" d="M199.56,150.45s9.32,9.18-3.68,12.26-3.59,19.07-3.59,19.07"/>
+      <path class="cls-16" d="M218.64,129.07c-2.29,17.95-9.93,21.01-17.95,23.3-8.02-2.29-15.66-6.87-17.95-23.3-4.2-17.57,8.04-23.3,17.95-23.3s21.39,4.96,17.95,23.3Z"/>
+      <ellipse class="cls-1" cx="207.34" cy="114.75" rx="2.84" ry="2.48"/>
+      <path class="cls-9" d="M196.49,147.79c3.06,2.29,19.86,.76,4.96,4.96-14.13-1.91-17.95-16.42-15.66-16.42s6.11,9.93,10.69,11.46Z"/>
+      <rect class="cls-18" x="166" y="118.78" width="69" height="27"/>
+      <text class="cls-2" transform="translate(175.56 138.1)"><tspan x="0" y="0">ボロル</tspan></text>
+      <path class="cls-13" d="M112.63,571.2s9.32,9.18-3.68,12.26c-12.76,3.03-3.59,19.07-3.59,19.07"/>
+      <path class="cls-14" d="M131.71,549.82c-2.29,17.95-9.93,21.01-17.95,23.3-8.02-2.29-15.66-6.87-17.95-23.3-4.2-17.57,8.04-23.3,17.95-23.3s21.39,4.96,17.95,23.3Z"/>
+      <ellipse class="cls-1" cx="120.42" cy="535.5" rx="2.84" ry="2.48"/>
+      <path class="cls-9" d="M109.56,568.54c3.06,2.29,19.86,.76,4.96,4.96-14.13-1.91-17.95-16.42-15.66-16.42s6.11,9.93,10.69,11.46Z"/>
+      <g>
+        <rect class="cls-18" x="79.07" y="539.53" width="69" height="27"/>
+        <text class="cls-2" transform="translate(88.64 558.85)"><tspan x="0" y="0">ボロル</tspan></text>
+      </g>
+      <path class="cls-13" d="M274.48,339.21s9.32,9.18-3.68,12.26c-12.76,3.03-3.59,19.07-3.59,19.07"/>
+      <path class="cls-15" d="M293.56,317.84c-2.29,17.95-9.93,21.01-17.95,23.3-8.02-2.29-15.66-6.87-17.95-23.3-4.2-17.57,8.04-23.3,17.95-23.3s21.39,4.96,17.95,23.3Z"/>
+      <ellipse class="cls-1" cx="282.27" cy="303.52" rx="2.84" ry="2.48"/>
+      <path class="cls-11" d="M271.41,336.55c3.06,2.29,19.86,.76,4.96,4.96-14.13-1.91-17.95-16.42-15.66-16.42s6.11,9.93,10.69,11.46Z"/>
+      <g>
+        <rect class="cls-18" x="240.93" y="307.54" width="69" height="27"/>
+        <text class="cls-2" transform="translate(250.49 326.86)"><tspan x="0" y="0">ボロル</tspan></text>
+      </g>
+      <path class="cls-13" d="M358.48,283.45s9.32,9.18-3.68,12.26c-12.76,3.03-3.59,19.07-3.59,19.07"/>
+      <path class="cls-10" d="M377.56,262.07c-2.29,17.95-9.93,21.01-17.95,23.3-8.02-2.29-15.66-6.87-17.95-23.3-4.2-17.57,8.04-23.3,17.95-23.3s21.39,4.96,17.95,23.3Z"/>
+      <ellipse class="cls-1" cx="366.27" cy="247.75" rx="2.84" ry="2.48"/>
+      <path class="cls-11" d="M355.41,280.79c3.06,2.29,19.86,.76,4.96,4.96-14.13-1.91-17.95-16.42-15.66-16.42s6.11,9.93,10.69,11.46Z"/>
+      <g>
+        <rect class="cls-18" x="324.93" y="251.78" width="69" height="27"/>
+        <text class="cls-2" transform="translate(334.49 271.1)"><tspan x="0" y="0">ボロル</tspan></text>
+      </g>
+      <path class="cls-13" d="M439.48,553.45s9.32,9.18-3.68,12.26c-12.76,3.03-3.59,19.07-3.59,19.07"/>
+      <path class="cls-17" d="M458.56,532.07c-2.29,17.95-9.93,21.01-17.95,23.3-8.02-2.29-15.66-6.87-17.95-23.3-4.2-17.57,8.04-23.3,17.95-23.3s21.39,4.96,17.95,23.3Z"/>
+      <ellipse class="cls-1" cx="447.27" cy="517.75" rx="2.84" ry="2.48"/>
+      <path class="cls-11" d="M436.41,550.79c3.06,2.29,19.86,.76,4.96,4.96-14.13-1.91-17.95-16.42-15.66-16.42s6.11,9.93,10.69,11.46Z"/>
+      <g>
+        <rect class="cls-18" x="405.93" y="521.78" width="69" height="27"/>
+        <text class="cls-2" transform="translate(415.49 541.1)"><tspan x="0" y="0">ボロル</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
