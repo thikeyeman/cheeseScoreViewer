@@ -6,7 +6,7 @@ window.onload = function () {
     var game = new Core(screenWidth, screenHeight);
     game.fps = 30;
 
-    var userImg = "../assets/user.png";
+    var userImg = "assets/png/user.png";
 
     game.preload(userImg);
 	
@@ -20,7 +20,7 @@ window.onload = function () {
         }
     })
 	
-    var scoreScene = function () {
+    var scoreScreen = function () {
         var scene = new Scene();
 		var user = new userSprite(10,10);
 		scene.addChild(user);
