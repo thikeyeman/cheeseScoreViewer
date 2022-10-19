@@ -6,7 +6,9 @@
 </head>
 
 <body>
-	<p>HELLO everyone
+
+	<p>
+
 	</p>
 </body>
 </html>                                                                                      

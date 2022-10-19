@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.76 83">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e7e3d9;
+      }
+
+      .cls-2 {
+        fill: #575650;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_1-2" data-name="レイヤー 1">
+    <g>
+      <circle class="cls-2" cx="47.38" cy="21.89" r="21.89"/>
+      <ellipse class="cls-1" cx="47.38" cy="67.31" rx="47.38" ry="15.69"/>
+    </g>
+  </g>
+</svg>
