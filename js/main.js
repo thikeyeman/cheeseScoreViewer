@@ -6,7 +6,7 @@ window.onload = function () {
     var game = new Core(screenWidth, screenHeight);
     game.fps = 30;
 
-    var userImg = "user.png";
+    var userImg = "../assets/user.png";
 
     game.preload(userImg);
 	
