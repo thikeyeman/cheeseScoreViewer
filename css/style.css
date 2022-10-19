@@ -1,15 +1,11 @@
 /* CSS Document */
-
-
-.userScore img{
-    padding-top:700px;
-    width: 10%;
-    height: 10%;
-
-}
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-
+	overflow: hidden;
+}
+body{
+	background-color: green;
+	/*background-image: url("file:///C:/Users/yxm211023/Downloads/_MG_7434.JPG");
+	background-size: cover;*/
 }
