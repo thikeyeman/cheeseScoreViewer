@@ -161,7 +161,7 @@ window.onload = function () {
         starSpritebanner.frame = 1;
         scene.addChild(starSpritebanner);
         starSpritebanner.addEventListener("enterframe", function () {
-            this.frame = 1;
+            this.frame = 0;
         })
 
         ///////////////////////////Right Side Area ** Ends//////////////////////////////////////////////////////////////////////////////////////////
