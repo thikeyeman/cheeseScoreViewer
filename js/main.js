@@ -96,6 +96,7 @@ window.onload = function () {
 			this.y = y;
 			this.scaleY =0.8;
 			this.frame = frame;
+			this.opacity = 0.5;
 			
 		}
 	})
@@ -160,7 +161,7 @@ window.onload = function () {
         starSpritebanner.frame = 1;
         scene.addChild(starSpritebanner);
         starSpritebanner.addEventListener("enterframe", function () {
-            this.frame = this.age % 4;
+            this.frame = 1;
         })
 
         ///////////////////////////Right Side Area ** Ends//////////////////////////////////////////////////////////////////////////////////////////
