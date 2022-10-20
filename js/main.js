@@ -123,12 +123,6 @@ window.onload = function () {
 
         ///////////////////////////Player Name Creation ** Begins///////////////////////////////////////////////////
 
-        for (var i = 0; i < numOfPlayers; i++) {
-            usersNames[i] = usernameLabel(10, 100);
-            scene.addChild(usersSprite[i]);
-        }
-
-
 		for (i = 0; i < numOfPlayers; i++) {
            usersNames[i] = new labelClass(100+10, offsetY+7.2-25 + i * 100);
             scene.addChild(usersNames[i]);
