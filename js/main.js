@@ -22,17 +22,12 @@ window.onload = function () {
 
     var mvpImage = "assets/png/medalsspritesheet.png";
     var starImage = "assets/png/starbannerspritesheet.png";
-
-    game.preload(userImg, mvpImage, starImage);
-
-    var scoreBarImg = "assets/png/scoreBarspritesheet.png";
+	var scoreBarImg = "assets/png/scoreBarspritesheet.png";
 	var userAreaImg = "assets/png/userAreaBg.png";
 
-<<<<<<< HEAD
-  
-=======
-    game.preload(userImg,scoreBarImg,userAreaImg);
->>>>>>> yeman
+    game.preload(userImg, scoreBarImg,mvpImage, starImage,userAreaImg));
+
+
 
     //user image
     var userSprite = Class.create(Sprite, {
