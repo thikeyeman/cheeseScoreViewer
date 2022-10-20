@@ -1,3 +1,10 @@
+var getUser = function (str) {
+    $.get("php/fetchuser.php", function (data) {
+        str.text = data;
+    });
+};
+
+
 enchant();
 
 var numOfPlayers = 5;
@@ -12,7 +19,7 @@ var usersNames = [];
 var usersScores = [];
 var scoreBarsSprite = [];
 
-var i,j,k;
+var i, j, k;
 
 window.onload = function () {
     var game = new Core(screenWidth, screenHeight);
@@ -22,11 +29,10 @@ window.onload = function () {
 
     var mvpImage = "assets/png/medalsspritesheet.png";
     var starImage = "assets/png/starbannerspritesheet.png";
-	var scoreBarImg = "assets/png/scoreBarspritesheet.png";
-	var userAreaImg = "assets/png/userAreaBg.png";
+    var scoreBarImg = "assets/png/scoreBarspritesheet.png";
+    var userAreaImg = "assets/png/userAreaBg.png";
 
-    game.preload(userImg, scoreBarImg,mvpImage, starImage,userAreaImg);
-
+    game.preload(userImg, scoreBarImg, mvpImage, starImage, userAreaImg);
 
 
     //user image
@@ -61,44 +67,44 @@ window.onload = function () {
         }
     })
 
-	
-	//scoreBar image
+
+    //scoreBar image
     var scoreBarSprite = Class.create(Sprite, {
         initialize: function (x, y, frame) {
             Sprite.call(this, 334, 48);
             this.image = game.assets[scoreBarImg];
             this.x = x;
             this.y = y;
-			this.scaleY = 0.7;
+            this.scaleY = 0.7;
             this.frame = frame;
         }
     })
-	
-	//label
-	var labelClass = Class.create(Label,{
-		initialize: function(x,y){
-			enchant.Label.call(this,"クロ情報TA");
-			this.x = x;
-			this.y = y;
-			this.color ="Black";
-			this.size = 30;
-			this.font = "bold 26px sans-serif";
-			
-		}
-	})
-	
-	//userAreaBackground image
-	var userAreaBgSprite = Class.create(Sprite,{
-		initialize: function(x,y, frame){
-			Sprite.call(this, 524, 118);
-			this.image = game.assets[userAreaImg];
-			this.x = x;
-			this.y = y;
-			this.scaleY =0.8;
-			this.frame = frame;
-			
-		}
-	})
+
+    //label
+    var labelClass = Class.create(Label, {
+        initialize: function (x, y) {
+            enchant.Label.call(this, "");
+            this.x = x;
+            this.y = y;
+            this.color = "Black";
+            this.size = 30;
+            this.font = "bold 26px sans-serif";
+
+        }
+    })
+
+    //userAreaBackground image
+    var userAreaBgSprite = Class.create(Sprite, {
+        initialize: function (x, y, frame) {
+            Sprite.call(this, 524, 118);
+            this.image = game.assets[userAreaImg];
+            this.x = x;
+            this.y = y;
+            this.scaleY = 0.8;
+            this.frame = frame;
+
+        }
+    })
 
 
     var scoreScreen = function () {
@@ -108,49 +114,41 @@ window.onload = function () {
 
         ///////////////////////////Player Icon Creation ** Begins///////////////////////////////////////////////////
         for (i = 0; i < numOfPlayers; i++) {
-            usersSprite[i] = new userSprite(10, offsetY + i * 100, i<5?i:1+i);
+            usersSprite[i] = new userSprite(10, offsetY + i * 100, i < 5 ? i : 1 + i);
             scene.addChild(usersSprite[i]);
         }
-        ///////////////////////////Player Icon Creation ** Ends////////////////////////////////////////////////////
-		
-		///////////////////////////scoreBar Creation ** Begins///////////////////////////////////////////////////
+
+        ///////////////////////////scoreBar Creation ** Begins///////////////////////////////////////////////////
         for (i = 0; i < numOfPlayers; i++) {
-            scoreBarsSprite[i] = new scoreBarSprite(100+10, offsetY+7.2 + i * 100, i<5?i:1+i);
+            scoreBarsSprite[i] = new scoreBarSprite(100 + 10, offsetY + 7.2 + i * 100, i < 5 ? i : 1 + i);
             scene.addChild(scoreBarsSprite[i]);
         }
-        ///////////////////////////scoreBar Creation ** Ends////////////////////////////////////////////////////
-
 
         ///////////////////////////Player Name Creation ** Begins///////////////////////////////////////////////////
-
-		for (i = 0; i < numOfPlayers; i++) {
-           usersNames[i] = new labelClass(100+10, offsetY+7.2-25 + i * 100);
-            scene.addChild(usersNames[i]);
-        }
-
-
-        ///////////////////////////Player Name Creation ** Ends////////////////////////////////////////////////////
-		
-		///////////////////////////userAreaBackground Creation ** Begins///////////////////////////////////////////////////
         for (i = 0; i < numOfPlayers; i++) {
-            userAreaBgSprite[i] = new userAreaBgSprite(0, offsetY+7.2-45 + i * 100, i<5?i:1+i);
-            scene.insertBefore(userAreaBgSprite[i],scene.firstChild);
+            usersNames[i] = new labelClass(100 + 10, offsetY + 7.2 - 25 + i * 100);
+            scene.addChild(usersNames[i]);
+            getUser(usersNames[i]);
         }
-        ///////////////////////////userAreaBackground Creation ** Ends////////////////////////////////////////////////////
 
-        ///////////////////////////Left Side Area ** Ends//////////////////////////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////userAreaBackground Creation ** Begins///////////////////////////////////////////////////
+        for (i = 0; i < numOfPlayers; i++) {
+            userAreaBgSprite[i] = new userAreaBgSprite(0, offsetY + 7.2 - 45 + i * 100, i < 5 ? i : 1 + i);
+            scene.insertBefore(userAreaBgSprite[i], scene.firstChild);
+        }
 
         ///////////////////////////Right Side Area ** Begins////////////////////////////////////////////////////////////////////////////////////////
 
         ///////////////////////////Mvp   Creation ** Begins///////////////////////////////////////////////////
-        var mvpMedal = new mvpSprite(offsetX*3.1, offsetY *1.6);
+        var mvpMedal = new mvpSprite(offsetX * 3.1, offsetY * 1.6);
         mvpMedal.frame = 1;
         scene.addChild(mvpMedal);
         mvpMedal.addEventListener("enterframe", function () {
             this.frame = (this.age / 150) % 3;
         })
         /////////////////////////////////////////////////star banner //////////////////////////////////
-        var starSpritebanner = new starSprite(offsetX*3.1, offsetY *1.2);
+        var starSpritebanner = new starSprite(offsetX * 3.1, offsetY * 1.2);
         starSpritebanner.frame = 0;
         scene.addChild(starSpritebanner);
 
