@@ -2,10 +2,10 @@ enchant();
 
 var numOfPlayers = 5;
 
-var screenWidth = 1000;
-var screenHeight = 1000;
+var screenWidth = 1920;
+var screenHeight = 1080;
 var offsetX = 500;
-var offsetY = 500;
+var offsetY = 580;
 
 var usersSprite = [];
 var usersNames = [];
@@ -16,8 +16,10 @@ window.onload = function () {
     game.fps = 30;
 
     var userImg = "assets/png/userspritesheet.png";
+    var mvpImage = "assets/png/medalsspritesheet.png";
+    var starImage = "assets/png/starbannerspritesheet.png";
 
-    game.preload(userImg);
+    game.preload(userImg, mvpImage, starImage);
 
     //user image
     var userSprite = Class.create(Sprite, {
@@ -27,6 +29,26 @@ window.onload = function () {
             this.x = x;
             this.y = y;
             this.frame = frame;
+        }
+    })
+    //mvp image
+    var mvpSprite = Class.create(Sprite, {
+        initialize: function (x, y) {
+            Sprite.call(this, 62, 86);
+            this.image = game.assets[mvpImage];
+            this.x = x;
+            this.y = y;
+        }
+    })
+    //star banner image
+    var starSprite = Class.create(Sprite, {
+        initialize: function (x, y) {
+            Sprite.call(this, 327, 216);
+            this.image = game.assets[starImage];
+            this.x = x;
+            this.y = y;
+            this.scaleX = 1;
+            this.scaleY = 1;
         }
     })
 
@@ -44,18 +66,33 @@ window.onload = function () {
 
 
         ///////////////////////////Player Name Creation ** Begins///////////////////////////////////////////////////
-		for(var i = 0; i<numOfPlayers; i++){
-			usersNames[i] = usernameLabel(10, 100);
-			scene.addChild(usersSprite[i]);
-		}
-		
+        for (var i = 0; i < numOfPlayers; i++) {
+            usersNames[i] = usernameLabel(10, 100);
+            scene.addChild(usersSprite[i]);
+        }
+
 
         ///////////////////////////Player Name Creation ** Ends////////////////////////////////////////////////////
 
         ///////////////////////////Left Side Area ** Ends//////////////////////////////////////////////////////////////////////////////////////////
 
-
         ///////////////////////////Right Side Area ** Begins////////////////////////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////Mvp   Creation ** Begins///////////////////////////////////////////////////
+        var mvpMedal = new mvpSprite(offsetX*3.1, offsetY *1.6);
+        mvpMedal.frame = 1;
+        scene.addChild(mvpMedal);
+        mvpMedal.addEventListener("enterframe", function () {
+            this.frame = (this.age / 150) % 3;
+        })
+        /////////////////////////////////////////////////star banner //////////////////////////////////
+        var starSpritebanner = new starSprite(offsetX*3.1, offsetY *1.2);
+        starSpritebanner.frame = 1;
+        scene.addChild(starSpritebanner);
+        starSpritebanner.addEventListener("enterframe", function () {
+            this.frame = this.age % 4;
+        })
+
         ///////////////////////////Right Side Area ** Ends//////////////////////////////////////////////////////////////////////////////////////////
         return scene;
     };
