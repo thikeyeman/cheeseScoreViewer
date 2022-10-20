@@ -19,10 +19,15 @@ window.onload = function () {
     game.fps = 30;
 
     var userImg = "assets/png/userspritesheet.png";
-    var scoreBarImg = "assets/png/scoreBarspritesheet.png";
+
+    var mvpImage = "assets/png/medalsspritesheet.png";
+    var starImage = "assets/png/starbannerspritesheet.png";
+	var scoreBarImg = "assets/png/scoreBarspritesheet.png";
 	var userAreaImg = "assets/png/userAreaBg.png";
 
-    game.preload(userImg,scoreBarImg,userAreaImg);
+    game.preload(userImg, scoreBarImg,mvpImage, starImage,userAreaImg);
+
+
 
     //user image
     var userSprite = Class.create(Sprite, {
@@ -34,6 +39,28 @@ window.onload = function () {
             this.frame = frame;
         }
     })
+
+    //mvp image
+    var mvpSprite = Class.create(Sprite, {
+        initialize: function (x, y) {
+            Sprite.call(this, 62, 86);
+            this.image = game.assets[mvpImage];
+            this.x = x;
+            this.y = y;
+        }
+    })
+    //star banner image
+    var starSprite = Class.create(Sprite, {
+        initialize: function (x, y) {
+            Sprite.call(this, 327, 216);
+            this.image = game.assets[starImage];
+            this.x = x;
+            this.y = y;
+            this.scaleX = 1;
+            this.scaleY = 1;
+        }
+    })
+
 	
 	//scoreBar image
     var scoreBarSprite = Class.create(Sprite, {
@@ -54,8 +81,13 @@ window.onload = function () {
 			this.x = x;
 			this.y = y;
 			this.color ="Black";
+<<<<<<< HEAD
 			this.font = "bold 26px sans-serif";
 			
+=======
+			this.size = 30;
+			this.font = "bold 26px sans-serif";
+>>>>>>> master
 			
 		}
 	})
@@ -73,6 +105,7 @@ window.onload = function () {
 			
 		}
 	})
+
 
     var scoreScreen = function () {
         var scene = new Scene();
@@ -95,10 +128,18 @@ window.onload = function () {
 
 
         ///////////////////////////Player Name Creation ** Begins///////////////////////////////////////////////////
+
+        for (var i = 0; i < numOfPlayers; i++) {
+            usersNames[i] = usernameLabel(10, 100);
+            scene.addChild(usersSprite[i]);
+        }
+
+
 		for (i = 0; i < numOfPlayers; i++) {
            usersNames[i] = new labelClass(100+10, offsetY+7.2-25 + i * 100);
             scene.addChild(usersNames[i]);
         }
+
 
         ///////////////////////////Player Name Creation ** Ends////////////////////////////////////////////////////
 		
@@ -111,8 +152,23 @@ window.onload = function () {
 
         ///////////////////////////Left Side Area ** Ends//////////////////////////////////////////////////////////////////////////////////////////
 
-
         ///////////////////////////Right Side Area ** Begins////////////////////////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////Mvp   Creation ** Begins///////////////////////////////////////////////////
+        var mvpMedal = new mvpSprite(offsetX*3.1, offsetY *1.6);
+        mvpMedal.frame = 1;
+        scene.addChild(mvpMedal);
+        mvpMedal.addEventListener("enterframe", function () {
+            this.frame = (this.age / 150) % 3;
+        })
+        /////////////////////////////////////////////////star banner //////////////////////////////////
+        var starSpritebanner = new starSprite(offsetX*3.1, offsetY *1.2);
+        starSpritebanner.frame = 1;
+        scene.addChild(starSpritebanner);
+        starSpritebanner.addEventListener("enterframe", function () {
+            this.frame = this.age % 4;
+        })
+
         ///////////////////////////Right Side Area ** Ends//////////////////////////////////////////////////////////////////////////////////////////
         return scene;
     };
