@@ -80,7 +80,7 @@ window.onload = function () {
 			enchant.Label.call(this,"クロ情報TA");
 			this.x = x;
 			this.y = y;
-			this.color ="Red";
+			this.color ="Black";
 			this.size = 30;
 			this.font = "bold 26px sans-serif";
 			
