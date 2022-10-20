@@ -53,8 +53,8 @@ window.onload = function () {
 			enchant.Label.call(this,"クロ情報TA");
 			this.x = x;
 			this.y = y;
-			this.color ="Red";
-			this.size = 30;
+			this.color ="Black";
+			this.font = "bold 26px sans-serif";
 			
 			
 		}
@@ -96,7 +96,7 @@ window.onload = function () {
 
         ///////////////////////////Player Name Creation ** Begins///////////////////////////////////////////////////
 		for (i = 0; i < numOfPlayers; i++) {
-           usersNames[i] = new labelClass(100+10, offsetY+7.2-20 + i * 100);
+           usersNames[i] = new labelClass(100+10, offsetY+7.2-25 + i * 100);
             scene.addChild(usersNames[i]);
         }
 
@@ -104,7 +104,7 @@ window.onload = function () {
 		
 		///////////////////////////userAreaBackground Creation ** Begins///////////////////////////////////////////////////
         for (i = 0; i < numOfPlayers; i++) {
-            userAreaBgSprite[i] = new userAreaBgSprite(0, offsetY+7.2-35 + i * 100, i<5?i:1+i);
+            userAreaBgSprite[i] = new userAreaBgSprite(0, offsetY+7.2-45 + i * 100, i<5?i:1+i);
             scene.insertBefore(userAreaBgSprite[i],scene.firstChild);
         }
         ///////////////////////////userAreaBackground Creation ** Ends////////////////////////////////////////////////////
