@@ -97,7 +97,6 @@ window.onload = function () {
 			this.scaleY =0.8;
 			this.frame = frame;
 			
-			
 		}
 	})
 
