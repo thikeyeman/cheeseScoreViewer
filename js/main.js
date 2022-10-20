@@ -2,8 +2,8 @@ enchant();
 
 var numOfPlayers = 5;
 
-var screenWidth = 1000;
-var screenHeight = 1000;
+var screenWidth = 1920;
+var screenHeight = 1080;
 var offsetX = 500;
 var offsetY = 500;
 
