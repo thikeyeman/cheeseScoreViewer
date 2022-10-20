@@ -4,7 +4,14 @@ var getUser = function (str) {
     });
 };
 
+window.focus();
 
+var game;
+
+document.onkeyup = function (e) {
+    game.keyflg = false;
+    return true;
+};
 enchant();
 
 var numOfPlayers = 5;
@@ -22,7 +29,8 @@ var scoreBarsSprite = [];
 var i, j, k;
 
 window.onload = function () {
-    var game = new Core(screenWidth, screenHeight);
+    game = new Core(screenWidth, screenHeight);
+	game.keyflg = false;
     game.fps = 30;
 
     var userImg = "assets/png/userspritesheet.png";
@@ -33,6 +41,12 @@ window.onload = function () {
     var userAreaImg = "assets/png/userAreaBg.png";
 
     game.preload(userImg, scoreBarImg, mvpImage, starImage, userAreaImg);
+
+    game.keybind(87, "w");
+    game.keybind(81, "q");
+    game.keybind(69, "e");
+    game.keybind(82, "r");
+    game.keybind(84, "t");
 
 
     //user image
@@ -76,6 +90,7 @@ window.onload = function () {
             this.x = x;
             this.y = y;
             this.scaleY = 0.7;
+            this.width = 0;
             this.frame = frame;
         }
     })
@@ -123,6 +138,50 @@ window.onload = function () {
             scoreBarsSprite[i] = new scoreBarSprite(100 + 10, offsetY + 7.2 + i * 100, i < 5 ? i : 1 + i);
             scene.addChild(scoreBarsSprite[i]);
         }
+        scene.addEventListener('enterframe', function()
+        {    
+			if(game.input.q)
+            {
+                if(!game.keyflg)
+                {
+                   scoreBarsSprite[0].width += 10;
+                   game.keyflg = true;
+                }
+            }
+			if(game.input.w)
+            {
+                if(!game.keyflg)
+                {
+                   scoreBarsSprite[1].width += 10;
+                   game.keyflg = true;
+                }
+            }
+			if(game.input.e)
+            {
+                if(!game.keyflg)
+                {
+                   scoreBarsSprite[2].width += 10;
+                   game.keyflg = true;
+                }
+            }
+			if(game.input.r)
+            {
+                if(!game.keyflg)
+                {
+                   scoreBarsSprite[3].width += 10;
+                   game.keyflg = true;
+                }
+            }
+			if(game.input.t)
+            {
+                if(!game.keyflg)
+                {
+                   scoreBarsSprite[4].width += 10;
+                   game.keyflg = true;
+                }
+            }
+        });
+
 
         ///////////////////////////Player Name Creation ** Begins///////////////////////////////////////////////////
         for (i = 0; i < numOfPlayers; i++) {
