@@ -26,8 +26,13 @@ window.onload = function () {
     game.preload(userImg, mvpImage, starImage);
 
     var scoreBarImg = "assets/png/scoreBarspritesheet.png";
+	var userAreaImg = "assets/png/userAreaBg.png";
 
+<<<<<<< HEAD
   
+=======
+    game.preload(userImg,scoreBarImg,userAreaImg);
+>>>>>>> yeman
 
     //user image
     var userSprite = Class.create(Sprite, {
@@ -80,8 +85,24 @@ window.onload = function () {
 			enchant.Label.call(this,"クロ情報TA");
 			this.x = x;
 			this.y = y;
-			this.fontSize = 30;
-			this.color = "white";
+			this.color ="Red";
+			this.size = 30;
+			
+			
+		}
+	})
+	
+	//userAreaBackground image
+	var userAreaBgSprite = Class.create(Sprite,{
+		initialize: function(x,y, frame){
+			Sprite.call(this, 524, 118);
+			this.image = game.assets[userAreaImg];
+			this.x = x;
+			this.y = y;
+			this.scaleY =0.8;
+			this.frame = frame;
+			
+			
 		}
 	})
 
@@ -121,6 +142,13 @@ window.onload = function () {
 
 
         ///////////////////////////Player Name Creation ** Ends////////////////////////////////////////////////////
+		
+		///////////////////////////userAreaBackground Creation ** Begins///////////////////////////////////////////////////
+        for (i = 0; i < numOfPlayers; i++) {
+            userAreaBgSprite[i] = new userAreaBgSprite(0, offsetY+7.2-35 + i * 100, i<5?i:1+i);
+            scene.insertBefore(userAreaBgSprite[i],scene.firstChild);
+        }
+        ///////////////////////////userAreaBackground Creation ** Ends////////////////////////////////////////////////////
 
         ///////////////////////////Left Side Area ** Ends//////////////////////////////////////////////////////////////////////////////////////////
 
