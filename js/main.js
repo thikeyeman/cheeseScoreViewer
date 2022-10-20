@@ -81,13 +81,8 @@ window.onload = function () {
 			this.x = x;
 			this.y = y;
 			this.color ="Black";
-<<<<<<< HEAD
-			this.font = "bold 26px sans-serif";
-			
-=======
 			this.size = 30;
 			this.font = "bold 26px sans-serif";
->>>>>>> master
 			
 		}
 	})
