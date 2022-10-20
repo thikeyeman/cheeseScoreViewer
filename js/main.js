@@ -25,7 +25,7 @@ window.onload = function () {
 	var scoreBarImg = "assets/png/scoreBarspritesheet.png";
 	var userAreaImg = "assets/png/userAreaBg.png";
 
-    game.preload(userImg, scoreBarImg,mvpImage, starImage,userAreaImg));
+    game.preload(userImg, scoreBarImg,mvpImage, starImage,userAreaImg);
 
 
 
