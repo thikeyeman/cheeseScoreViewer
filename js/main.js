@@ -5,7 +5,7 @@ var numOfPlayers = 5;
 var screenWidth = 1920;
 var screenHeight = 1080;
 var offsetX = 500;
-var offsetY = 580;
+var offsetY = 600;
 
 var usersSprite = [];
 var usersNames = [];
@@ -157,11 +157,8 @@ window.onload = function () {
         })
         /////////////////////////////////////////////////star banner //////////////////////////////////
         var starSpritebanner = new starSprite(offsetX*3.1, offsetY *1.2);
-        starSpritebanner.frame = 1;
+        starSpritebanner.frame = 0;
         scene.addChild(starSpritebanner);
-        starSpritebanner.addEventListener("enterframe", function () {
-            this.frame = 0;
-        })
 
         ///////////////////////////Right Side Area ** Ends//////////////////////////////////////////////////////////////////////////////////////////
         return scene;
