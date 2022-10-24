@@ -2,18 +2,23 @@
 <html>
 <head>
 <meta charset="utf-8">
-
 <title>Score Board</title>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script> 
 <script type="text/javascript" src="enchant.js"></script> 
-<script type="text/javascript" src="js/main.js"></script> 
-<script type="text/javascript" src="js/usersnames.js"></script> 
-<script type="text/javascript" src="js/currentPlayerScore.js"></script> 
-<script type="text/javascript" src="js/mvpScore.js"></script>
-<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+<div id="wrapper"> 
+  <form id="nameForm" style="z-index: 1000 !important;">
+    <input type="text" name="name" id="name0" placeholder="Player1" value="ポトムリ">
+    <input type="text" name="name" id="name1" placeholder="Player2" value="パイン">
+    <input type="text" name="name" id="name2" placeholder="Player3" value="ノーハウ">
+    <input type="text" name="name" id="name3" placeholder="Player4" value="ウイズ">
+    <input type="text" name="name" id="name4" placeholder="Player5" value="李壱岐">
+    <input type="text" name="mvp" id="mvp0" placeholder="MVP" value="秋田">
+  </form>
+</div>
 </body>
 </html>
