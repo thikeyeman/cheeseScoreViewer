@@ -2,14 +2,14 @@
 * {
     margin: 0;
     padding: 0;
-	overflow: hidden;
+    overflow: hidden;
 }
-body{
-	background-color: #00FF00;
-	/*background-image: url("file:///C:/Users/yxm211023/Downloads/_MG_7434.JPG");
+body {
+    background-color: #00FF00;
+    /*background-image: url("file:///C:/Users/yxm211023/Downloads/_MG_7434.JPG");
 	background-size: cover;*/
 }
-#wrapper{
+#wrapper {
     position: relative;
-    height: 400px;
+    height: 300px;
 }
